@@ -25,15 +25,16 @@ public class FirstTest {
         //WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         //maximize window
+         System.out.println("maximize window");
             driver.manage().window().maximize();
-
+        System.out.println("add timeout");
             //add implicit timeout
             driver.manage()
                     .timeouts()
                     .implicitlyWait(Duration.ofSeconds(30));
-
+       System.out.println("launching browser");
         driver.get("https://www.google.com");
-        
+         System.out.println("getting title");
         System.out.println("Title of the page is: " + driver.getTitle());
         //Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Google"));
     }
