@@ -6,6 +6,8 @@ import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import java.time.Duration;
+
 
 public class FirstTest {
 
@@ -22,7 +24,16 @@ public class FirstTest {
 
         //WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
+        //maximize window
+            driver.manage().window().maximize();
+
+            //add implicit timeout
+            driver.manage()
+                    .timeouts()
+                    .implicitlyWait(Duration.ofSeconds(30));
+
         driver.get("https://www.google.com");
+        
         System.out.println("Title of the page is: " + driver.getTitle());
         //Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Google"));
     }
