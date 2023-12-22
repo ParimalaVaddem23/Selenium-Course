@@ -1,6 +1,6 @@
 package com.qascript;
 
-//import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.WebDriverManager;
 //import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
@@ -15,14 +15,13 @@ public class FirstTest {
     @Test
     public void OpenBrowser()  {
         WebDriver driver;
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         options.addArguments("disable-gpu");
         options.addArguments("--no-sandbox");
-        //options.addArguments(Arrays.asList("--headless", "--no-sandbox"));
 
-        //WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         //maximize window
          System.out.println("maximize window");
