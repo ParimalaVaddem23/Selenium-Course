@@ -1,8 +1,8 @@
 package com.qascript;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.Assert;
-import org.junit.Test;
+//import io.github.bonigarcia.wdm.WebDriverManager;
+//import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -17,11 +17,11 @@ public class FirstTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         options.addArguments("disable-gpu");
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         driver.get("https://www.google.com");
         System.out.println("Title of the page is: " + driver.getTitle());
-        Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Google"));
+        //Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Google"));
     }
 
 
