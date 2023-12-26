@@ -21,8 +21,8 @@ public class FirstTest {
         options.addArguments("headless");
 //        options.addArguments("disable-gpu");
         options.addArguments("--no-sandbox");
-        options.addArguments("--disable-setuid-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
+       // options.addArguments("--disable-setuid-sandbox");
+       // options.addArguments("--disable-dev-shm-usage");
 
 
         //WebDriverManager.chromedriver().setup();
