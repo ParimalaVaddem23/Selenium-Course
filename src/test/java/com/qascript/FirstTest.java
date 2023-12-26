@@ -17,7 +17,7 @@ public class FirstTest {
         WebDriver driver;
        // System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
-        chromeOptions.setBinary("/usr/bin/chromedriver");
+        options.setBinary("/usr/bin/chromedriver");
         options.addArguments("headless");
 //        options.addArguments("disable-gpu");
         options.addArguments("--no-sandbox");
